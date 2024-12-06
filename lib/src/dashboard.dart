@@ -1,6 +1,7 @@
 import 'dart:developer' show log;
 import 'dart:math' show pi;
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
@@ -68,10 +69,11 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final txt = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Simple QR Scanner',
+          txt!.title,
           style: const TextStyle(
             fontSize: 25.0,
             fontWeight: FontWeight.bold,
@@ -110,7 +112,7 @@ class _DashboardState extends State<Dashboard> {
             FloatingActionButton(
               heroTag: 'qr',
               onPressed: isLoading ? null : () async => await _scan(context),
-              tooltip: 'Escanear QR',
+              tooltip: txt.tooltip_scan_qr,
               child: const Icon(Icons.qr_code),
             ),
           const SizedBox(height: 10.0),
@@ -118,7 +120,7 @@ class _DashboardState extends State<Dashboard> {
             FloatingActionButton(
               heroTag: 'barcode',
               onPressed: () => _scan(context, isQR: false),
-              tooltip: 'Escanear Código de Barras',
+              tooltip: txt.tooltip_scan_barcode,
               child: Transform.rotate(
                 angle: 90 * pi / 180,
                 child: const Icon(Icons.document_scanner_outlined),
@@ -129,7 +131,7 @@ class _DashboardState extends State<Dashboard> {
             FloatingActionButton(
               heroTag: 'share',
               onPressed: _shared,
-              tooltip: 'Compartir',
+              tooltip: txt.tooltip_share,
               child: const Icon(Icons.share),
             ),
         ],

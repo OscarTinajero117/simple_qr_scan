@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Result extends StatelessWidget {
   const Result({super.key, required this.result});
@@ -10,6 +11,7 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final txt = AppLocalizations.of(context);
     late final bool isUrl;
     try {
       final uri = Uri.parse(result);
@@ -35,7 +37,7 @@ class Result extends StatelessWidget {
           if (isUrl)
             ElevatedButton(
               onPressed: () => _pressUrl(result),
-              child: const Text('Abrir enlace'),
+              child: Text(txt!.button_open_link),
             ),
         ],
       ),

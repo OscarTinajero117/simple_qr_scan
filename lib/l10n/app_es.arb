@@ -1,0 +1,8 @@
+{
+  "@@locale": "es",
+  "title": "Simple Escáner de QR",
+  "tooltip_scan_qr": "Escanear QR",
+  "tooltip_scan_barcode": "Escanear Código de Barras",
+  "tooltip_share": "Compartir",
+  "button_open_link": "Abrir enlace"
+}

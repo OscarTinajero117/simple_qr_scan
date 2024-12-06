@@ -1,3 +1,3 @@
-# simple_qr_scan
+# Simple QR Scanner
 
-A new Flutter project.
+This App is a simple open source QR and Barcode Scanner.

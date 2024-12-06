@@ -30,7 +30,7 @@ class _DashboardState extends State<Dashboard> {
       isLoading = true;
     });
 
-    Share.share('Información: \n\n$result\n\nObtenido con Simple QR Scanner');
+    Share.share(result);
 
     setState(() {
       isLoading = false;

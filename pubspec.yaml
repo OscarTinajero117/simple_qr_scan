@@ -1,5 +1,5 @@
-name: simple_qr_scan
-description: "Simple QR Scan."
+name: simple_qr_scanner
+description: "Simple QR Scanner"
 publish_to: "none"
 version: 0.1.0
 
